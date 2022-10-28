@@ -1,0 +1,23 @@
+@font-face {
+        font-family: 'kalamregular';
+        src: url('kalam-regular-webfont.woff2') format('woff2'),
+                url('kalam-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+        font-family: 'kalamlight';
+        src: url('kalam-light-webfont.woff2') format('woff2'),
+                url('kalam-light-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+        font-family: 'akaya_telivigalaregular';
+        src: url('akayatelivigala-regular-webfont.woff2') format('woff2'),
+                url('akayatelivigala-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
