@@ -15,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -49,33 +49,48 @@ table {
 
 @font-face {
         font-family: 'kalamregular';
-        src: url('kalam-regular-webfont.woff2') format('woff2'),
-                url('kalam-regular-webfont.woff') format('woff');
+        src: url(./fonts/kalam-regular-webfont.woff2) format('woff2'),
+                url(./fonts/kalam-regular-webfont.woff) format('woff');
         font-weight: normal;
         font-style: normal;
 }
 
 @font-face {
         font-family: 'kalamlight';
-        src: url('kalam-light-webfont.woff2') format('woff2'),
-                url('kalam-light-webfont.woff') format('woff');
+        src: url(./fonts/kalam-light-webfont.woff2) format('woff2'),
+                url(./fonts/kalam-light-webfont.woff) format('woff');
         font-weight: normal;
         font-style: normal;
 }
 
 @font-face {
         font-family: 'akaya_telivigalaregular';
-        src: url('akayatelivigala-regular-webfont.woff2') format('woff2'),
-                url('akayatelivigala-regular-webfont.woff') format('woff');
+        src: url(./fonts/akayatelivigala-regular-webfont.woff2) format('woff2'),
+                url(./fonts/akayatelivigala-regular-webfont.woff) format('woff');
         font-weight: normal;
         font-style: normal;
 }
 
 body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
         height: max(100vh,1000px);
         width: max(100vw,1000px);
         background: url(./images/forest-creek.jpg) center/cover;
-        
+        color: antiquewhite;
+}
+
+form {
+        background-color: rgba(12, 11, 11, 0.6);
+        font-family: 'kalamregular';
+        height: 35%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
 }
 
 img {
@@ -86,4 +101,51 @@ img {
 div#logoContainer {
         height: 100px;
         width: 100px;
+}
+
+span {
+        color: red;
+        font-weight: 700;
+        font-size: 18px;
+}
+
+form input[type] {
+        border-radius: 10px;
+        padding-left: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 3px solid rgba(0, 0, 0, 0.8);
+        color: antiquewhite;
+}
+
+form fieldset legend {
+        font-weight: 700;
+        font-size: 23px;
+        margin-bottom: 10px;
+}
+
+form input[type]:focus {
+        outline: 3px solid rgba(2, 82, 43, 0.8);
+}
+
+form input[type]:invalid {
+        outline: 1px dashed red;
+}
+
+button {
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: 3px solid rgba(0, 0, 0, 0.8);
+        background-color: rgba(2, 82, 43, 0.5);
+        font: inherit;
+        width: 150px;
+        height: 50px;
+}
+
+#top {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        font-family: 'akaya_telivigalaregular';
+        font-size: 40px;
 }
